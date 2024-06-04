@@ -38,9 +38,6 @@ for i in range(1, 1000):
                        [w[2], 0, -w[0]], [-w[1], w[0], 0]])
     est_R.append(est_R[-1]@expm(w_skew*dt))
 
-
-
-
     # Linear accelerations (converted to global, minus gravity effect assuming it is included)
     a = (est_R[-2])@(loc_a[:, i])+ np.array([0,0,9.81])
 
